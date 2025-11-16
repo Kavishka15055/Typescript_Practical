@@ -15,11 +15,41 @@ tempArr2[2]=false;
 tempArr2[3]="Nimal";
 tempArr2[5]=true;
 
-const myObj ={
+const myObj:{
+    name1:string;
+    name2:string;
+    name3?:string;
+} ={
     name1: 'Kamal',
     name2: 'Nimal',
-    name3: 'Sunil',
+    // name3: 'Sunil',//? dala thiyena nisa optional wenawa noda inn puluwan
+    // name1: 'AAAa',//Meka waradi
 }
+myObj.name1= 'BBBB';
+
+
+//Type alias
+type TMyObj2 ={
+    name:string;
+    phone?:string;//optional
+    city?:string;//optional
+}
+
+const myObj2:TMyObj2 ={
+    name:'Sunimal',
+    phone:'0761234567',
+}
+//object type alias{object walta type deddi interface use karanawa}
+interface IMyObj {
+    name:string;
+    phone?:string;
+    city?:string;
+}
+const myObj3:IMyObj ={
+    name:'Saman',
+    city:'Colombo',
+}
+
 
 let userRole: userType;
 let testVar: test;
@@ -34,4 +64,6 @@ console.log(testVar);
 
 console.log(fname, lname, fullname);
 console.log(tempArr2);
-console.log(myObj.name2)
+console.log(myObj.name1)
+console.log(myObj2.phone);
+console.log(myObj3.city);

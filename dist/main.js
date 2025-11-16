@@ -14,7 +14,17 @@ tempArr2[5] = true;
 const myObj = {
     name1: 'Kamal',
     name2: 'Nimal',
-    name3: 'Sunil',
+    // name3: 'Sunil',//? dala thiyena nisa optional wenawa noda inn puluwan
+    // name1: 'AAAa',//Meka waradi
+};
+myObj.name1 = 'BBBB';
+const myObj2 = {
+    name: 'Sunimal',
+    phone: '0761234567',
+};
+const myObj3 = {
+    name: 'Saman',
+    city: 'Colombo',
 };
 let userRole;
 let testVar;
@@ -26,5 +36,7 @@ console.log(userRole);
 console.log(testVar);
 console.log(fname, lname, fullname);
 console.log(tempArr2);
-console.log(myObj.name2);
+console.log(myObj.name1);
+console.log(myObj2.phone);
+console.log(myObj3.city);
 //# sourceMappingURL=main.js.map
