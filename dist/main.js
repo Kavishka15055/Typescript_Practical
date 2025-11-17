@@ -1,43 +1,71 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Color;
-(function (Color) {
-    Color["red"] = "red";
-    Color["green"] = "green";
-    Color["blue"] = "blue";
-})(Color || (Color = {}));
-let userInput;
-userInput = Color.red;
-console.log('in', userInput);
-if (userInput == Color.red) {
-    console.log('red');
-}
-console.log('Out');
-const myTuple = ['kumara', 123, true];
-myTuple[0] = 'Sumudu';
-myTuple.push('Naveen');
-console.log(myTuple);
-var gender;
-(function (gender) {
-    gender[gender["male"] = 0] = "male";
-    gender[gender["female"] = 1] = "female";
-})(gender || (gender = {}));
-let userGender = gender.male;
-const userAge = 14;
-if (userGender == gender.male) {
-    if (userAge >= 18) {
-        console.log('You can eat');
+const systemUsers = [
+    {
+        name: 'Kamal',
+        age: 23,
+        city: 'Mathara',
+        username: 'Kamal',
+        password: "ABC"
+    },
+    {
+        name: 'Nimal',
+        age: 23,
+        city: 'Mathara',
+        username: 'Nimal',
+        password: "DEF"
+    },
+    {
+        name: 'Supun',
+        age: 25,
+        city: 'Colombo',
+        username: 'Supun',
+        password: "HIJ"
+    },
+];
+// const userInputUsername = 'Kamal A';
+// const userInputPassword = "ABC";
+function loginUser(username, password) {
+    if (systemUsers[0]?.username == username) {
+        console.log('Index 0');
+        if (systemUsers[0]?.password == password) {
+            console.log('Login success');
+        }
+        else {
+            console.log('Login failed');
+        }
+    }
+    else if (systemUsers[1]?.name == username) {
+        console.log('Index 1');
+        if (systemUsers[1]?.password == password) {
+            console.log('Login success');
+        }
+        else {
+            console.log('Login failed');
+        }
+    }
+    else if (systemUsers[2]?.name == username) {
+        console.log('Index 2');
+        if (systemUsers[2]?.password == password) {
+            console.log('Login success');
+        }
+        else {
+            console.log('Login failed');
+        }
     }
     else {
-        console.log('Plz go out');
+        console.log('Login failed');
     }
+    console.log('End');
 }
-else {
-    if (userAge >= 16) {
-        console.log('You can eat');
+//Arrow functions
+const numberCheck = (num1, num2) => {
+    if (num1 > num2) {
+        return num1;
     }
-    else {
-        console.log('Plz go out');
-    }
-}
+    return num2;
+};
+loginUser("Supun", "HIJ");
+loginUser("Amila", "XYZ");
+console.log(numberCheck(1, 2));
 //# sourceMappingURL=main.js.map

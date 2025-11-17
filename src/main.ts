@@ -1,43 +1,70 @@
-enum Color {
-    red='red',
-    green='green',
-    blue='blue'
-}
+import type {TUserData} from './our-type';
 
-let userInput;
-userInput = Color.red;
+const systemUsers:TUserData[] = [
+    {
+        name:'Kamal',
+        age:23,
+        city:'Mathara',
+        username:'Kamal',
+        password:"ABC"
+    },
+    {
+        name:'Nimal',
+        age:23,
+        city:'Mathara',
+        username:'Nimal',
+        password:"DEF"
+    },
+    {
+        name:'Supun',
+        age:25,
+        city:'Colombo',
+        username:'Supun',
+        password:"HIJ"
+    },
+];
 
-console.log('in',userInput);
-if(userInput==Color.red){
-    console.log('red')
-}
-console.log('Out');
+// const userInputUsername = 'Kamal A';
+// const userInputPassword = "ABC";
 
-const myTuple: [string, number, boolean] = ['kumara',123,true];
-myTuple[0]='Sumudu'
-
-myTuple.push('Naveen');
-console.log(myTuple);
-
-
-enum gender {
-    male = 0,
-    female = 1,
-}
-
-let userGender: gender =gender.male;
-const userAge:number = 14;
-
-if(userGender == gender.male){
-    if(userAge >= 18){
-        console.log('You can eat');
-    }else{
-        console.log('Plz go out');       
+function loginUser(username:string,password:string){
+    if(systemUsers[0]?.username == username){
+        console.log('Index 0');
+        if(systemUsers[0]?.password == password){
+            console.log('Login success');
+        }else{
+            console.log('Login failed');
+        }
+    }else if (systemUsers[1]?.name == username){
+        console.log('Index 1');
+        if(systemUsers[1]?.password == password){
+            console.log('Login success');
+        }else{
+            console.log('Login failed');
+        }
+    }else if (systemUsers[2]?.name == username){
+        console.log('Index 2');
+        if(systemUsers[2]?.password == password){
+            console.log('Login success');
+        }else{
+            console.log('Login failed');
+        }
+    }else {
+        console.log('Login failed');
     }
-}else{
-    if(userAge >=16){
-        console.log('You can eat');
-    }else{
-        console.log('Plz go out');
-    }
+    console.log('End');
+    
 }
+
+//Arrow functions
+const numberCheck =(num1:number,num2:number):number =>{
+    if(num1 > num2){
+        return num1;
+    }
+    return num2;
+}
+
+loginUser("Supun","HIJ");
+loginUser("Amila","XYZ");
+
+console.log(numberCheck(1,2));
