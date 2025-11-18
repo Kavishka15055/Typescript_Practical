@@ -1,70 +1,35 @@
-import type {TUserData} from './our-type';
+class SystemUser {
+    name!: string;
+    age!: number;
+    city!: string;
+    username!: string;
+    password!: string;
 
-const systemUsers:TUserData[] = [
-    {
-        name:'Kamal',
-        age:23,
-        city:'Mathara',
-        username:'Kamal',
-        password:"ABC"
-    },
-    {
-        name:'Nimal',
-        age:23,
-        city:'Mathara',
-        username:'Nimal',
-        password:"DEF"
-    },
-    {
-        name:'Supun',
-        age:25,
-        city:'Colombo',
-        username:'Supun',
-        password:"HIJ"
-    },
-];
-
-// const userInputUsername = 'Kamal A';
-// const userInputPassword = "ABC";
-
-function loginUser(username:string,password:string){
-    if(systemUsers[0]?.username == username){
-        console.log('Index 0');
-        if(systemUsers[0]?.password == password){
-            console.log('Login success');
-        }else{
-            console.log('Login failed');
-        }
-    }else if (systemUsers[1]?.name == username){
-        console.log('Index 1');
-        if(systemUsers[1]?.password == password){
-            console.log('Login success');
-        }else{
-            console.log('Login failed');
-        }
-    }else if (systemUsers[2]?.name == username){
-        console.log('Index 2');
-        if(systemUsers[2]?.password == password){
-            console.log('Login success');
-        }else{
-            console.log('Login failed');
-        }
-    }else {
-        console.log('Login failed');
+    login() {
+        console.log('User login');
     }
-    console.log('End');
-    
+    register() {
+        console.log('User register');
+    }
 }
 
-//Arrow functions
-const numberCheck =(num1:number,num2:number):number =>{
-    if(num1 > num2){
-        return num1;
-    }
-    return num2;
-}
+const userOne = new SystemUser();
+userOne.name = 'Kamal';
+userOne.age = 23;
+userOne.city = "Mathara";
+userOne.username = "Kamal";
+userOne.password = "kamal";
 
-loginUser("Supun","HIJ");
-loginUser("Amila","XYZ");
+console.log(userOne);
+userOne.login();
 
-console.log(numberCheck(1,2));
+
+const userTwo = new SystemUser();
+userTwo.name = 'Nimal';
+userTwo.age = 27;
+userTwo.city = "Kandy";
+userTwo.username = "Nimal";
+userTwo.password = "nimal";
+
+console.log(userTwo);
+userTwo.register();

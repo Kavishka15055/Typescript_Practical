@@ -1,71 +1,32 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const systemUsers = [
-    {
-        name: 'Kamal',
-        age: 23,
-        city: 'Mathara',
-        username: 'Kamal',
-        password: "ABC"
-    },
-    {
-        name: 'Nimal',
-        age: 23,
-        city: 'Mathara',
-        username: 'Nimal',
-        password: "DEF"
-    },
-    {
-        name: 'Supun',
-        age: 25,
-        city: 'Colombo',
-        username: 'Supun',
-        password: "HIJ"
-    },
-];
-// const userInputUsername = 'Kamal A';
-// const userInputPassword = "ABC";
-function loginUser(username, password) {
-    if (systemUsers[0]?.username == username) {
-        console.log('Index 0');
-        if (systemUsers[0]?.password == password) {
-            console.log('Login success');
-        }
-        else {
-            console.log('Login failed');
-        }
+class SystemUser {
+    name;
+    age;
+    city;
+    username;
+    password;
+    login() {
+        console.log('User login');
     }
-    else if (systemUsers[1]?.name == username) {
-        console.log('Index 1');
-        if (systemUsers[1]?.password == password) {
-            console.log('Login success');
-        }
-        else {
-            console.log('Login failed');
-        }
+    register() {
+        console.log('User register');
     }
-    else if (systemUsers[2]?.name == username) {
-        console.log('Index 2');
-        if (systemUsers[2]?.password == password) {
-            console.log('Login success');
-        }
-        else {
-            console.log('Login failed');
-        }
-    }
-    else {
-        console.log('Login failed');
-    }
-    console.log('End');
 }
-//Arrow functions
-const numberCheck = (num1, num2) => {
-    if (num1 > num2) {
-        return num1;
-    }
-    return num2;
-};
-loginUser("Supun", "HIJ");
-loginUser("Amila", "XYZ");
-console.log(numberCheck(1, 2));
+const userOne = new SystemUser();
+userOne.name = 'Kamal';
+userOne.age = 23;
+userOne.city = "Mathara";
+userOne.username = "Kamal";
+userOne.password = "kamal";
+console.log(userOne);
+userOne.login();
+const userTwo = new SystemUser();
+userTwo.name = 'Nimal';
+userTwo.age = 27;
+userTwo.city = "Kandy";
+userTwo.username = "Nimal";
+userTwo.password = "nimal";
+console.log(userTwo);
+userTwo.register();
 //# sourceMappingURL=main.js.map
