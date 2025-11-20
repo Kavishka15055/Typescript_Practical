@@ -13,43 +13,25 @@ class SystemUser {
         this.username = username;
         this.password = password;
     }
+    // Getter for name
+    getName() {
+        return this.name;
+    }
+    // Setter for name
+    setName(value) {
+        this.name = value;
+    }
     login() {
         console.log('User login', this.name);
+        console.log('User login', this.age);
     }
     register() {
         console.log('User register', this.name);
     }
 }
 const userOne = new SystemUser("Kamal", 23, "Mathara", "Kamal", "kamal");
-// userOne.name = 'Kamal';
-// userOne.age = 23;
-// userOne.city = "Mathara";
-// userOne.username = "Kamal";
-// userOne.password = "kamal";
 console.log(userOne);
-userOne.login();
-const userTwo = new SystemUser("Nimal", 27, "Kandy", "Nimal", "nimal");
-// userTwo.name = 'Nimal';
-// userTwo.age = 27;
-// userTwo.city = "Kandy";
-// userTwo.username = "Nimal";
-// userTwo.password = "nimal";
-console.log(userTwo);
-userTwo.register();
-// let code: any =123;
-// let employeeCode = <number>code;
-// console.log(typeof(employeeCode));
-// console.log(employeeCode);
-// interface Employee {
-//     name:string;
-//     code:number;
-// }
-// let employee = <Employee>{}
-// employee.name = 'John';
-// employee.code = 123;
-// console.log(employee.name);
-// console.log(employee.code);
-// let someValue: unknown ="this is a string";
-// let strLength: number =(<string>someValue).length;
-// console.log(strLength);
+userOne.setName("Nimal");
+console.log("updated Userone", userOne);
+console.log("Updated name: ", userOne.getName());
 //# sourceMappingURL=main.js.map
