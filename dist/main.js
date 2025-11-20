@@ -6,6 +6,13 @@ class SystemUser {
     city;
     username;
     password;
+    constructor(name, age, city, username, password) {
+        this.name = name;
+        this.age = age;
+        this.city = city;
+        this.username = username;
+        this.password = password;
+    }
     login() {
         console.log('User login', this.name);
     }
@@ -13,31 +20,35 @@ class SystemUser {
         console.log('User register', this.name);
     }
 }
-const userOne = new SystemUser();
-userOne.name = 'Kamal';
-userOne.age = 23;
-userOne.city = "Mathara";
-userOne.username = "Kamal";
-userOne.password = "kamal";
+const userOne = new SystemUser("Kamal", 23, "Mathara", "Kamal", "kamal");
+// userOne.name = 'Kamal';
+// userOne.age = 23;
+// userOne.city = "Mathara";
+// userOne.username = "Kamal";
+// userOne.password = "kamal";
 console.log(userOne);
 userOne.login();
-const userTwo = new SystemUser();
-userTwo.name = 'Nimal';
-userTwo.age = 27;
-userTwo.city = "Kandy";
-userTwo.username = "Nimal";
-userTwo.password = "nimal";
+const userTwo = new SystemUser("Nimal", 27, "Kandy", "Nimal", "nimal");
+// userTwo.name = 'Nimal';
+// userTwo.age = 27;
+// userTwo.city = "Kandy";
+// userTwo.username = "Nimal";
+// userTwo.password = "nimal";
 console.log(userTwo);
 userTwo.register();
-let code = 123;
-let employeeCode = code;
-console.log(typeof (employeeCode));
-console.log(employeeCode);
-let employee = {};
-employee.name = 'John';
-employee.code = 123;
-console.log(employee.name);
-console.log(employee.code);
+// let code: any =123;
+// let employeeCode = <number>code;
+// console.log(typeof(employeeCode));
+// console.log(employeeCode);
+// interface Employee {
+//     name:string;
+//     code:number;
+// }
+// let employee = <Employee>{}
+// employee.name = 'John';
+// employee.code = 123;
+// console.log(employee.name);
+// console.log(employee.code);
 // let someValue: unknown ="this is a string";
 // let strLength: number =(<string>someValue).length;
 // console.log(strLength);
