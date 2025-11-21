@@ -49,4 +49,13 @@ let person = {
 };
 let u = person;
 console.log(u);
+function showLength(value) {
+    if (typeof value === "string") {
+        console.log("String length:", value.length);
+    }
+    else {
+        console.log("Number doubled:", value * 2);
+    }
+}
+showLength("TypeScript");
 //# sourceMappingURL=main.js.map

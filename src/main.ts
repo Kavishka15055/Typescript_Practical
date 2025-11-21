@@ -59,6 +59,17 @@ let person = {
 let u: User = person;
 console.log(u);
 
+//union type 
+function showLength(value: string | number){
+    if (typeof value === "string"){
+        console.log("String length:", value.length);
+    } else {
+        console.log("Number doubled:", value * 2);
+    }
+}
+
+showLength("TypeScript");
+
 
 
 
