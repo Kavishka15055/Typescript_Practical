@@ -12,6 +12,7 @@ class SystemUser {
         this.city = city;
         this.username = username;
         this.password = password;
+        // this.register();
     }
     // Getter for name
     getName() {
@@ -28,10 +29,24 @@ class SystemUser {
     register() {
         console.log('User register', this.name);
     }
+    logout() {
+        console.log('user logout');
+    }
+    printOneToTen() {
+        let i = 1;
+        while (i <= 10) {
+            console.log(i);
+            i = i + 1;
+        }
+        console.log("End While loop.");
+    }
 }
 const userOne = new SystemUser("Kamal", 23, "Mathara", "Kamal", "kamal");
-console.log(userOne);
-userOne.setName("Nimal");
-console.log("updated Userone", userOne);
-console.log("Updated name: ", userOne.getName());
+let person = {
+    name: "Nimal",
+    age: 30,
+    city: "Kandy"
+};
+let u = person;
+console.log(u);
 //# sourceMappingURL=main.js.map
