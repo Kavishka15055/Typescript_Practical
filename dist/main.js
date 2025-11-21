@@ -49,6 +49,7 @@ let person = {
 };
 let u = person;
 console.log(u);
+//union type 
 function showLength(value) {
     if (typeof value === "string") {
         console.log("String length:", value.length);
@@ -58,4 +59,21 @@ function showLength(value) {
     }
 }
 showLength("TypeScript");
+showLength(25);
+let isStudent = true;
+let message = isStudent ? "Welcome, Student!" : "Welcome, Guest!";
+console.log(message);
+const translations = {
+    hello: "Hola",
+    world: "World",
+};
+console.log(translations["hello"]);
+console.log(translations["world"]);
+const flags = {
+    0: true,
+    1: false,
+    2: true
+};
+console.log(flags[0]);
+console.log(flags[1]);
 //# sourceMappingURL=main.js.map

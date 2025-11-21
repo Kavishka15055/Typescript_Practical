@@ -69,6 +69,52 @@ function showLength(value: string | number){
 }
 
 showLength("TypeScript");
+showLength(25);
+
+
+let isStudent: boolean =true;
+let message: string = isStudent ? "Welcome, Student!" : "Welcome, Guest!";
+console.log(message);
+
+// Object with typed properties
+// let person: { 
+//   name: string; 
+//   age: number; 
+//   isStudent: boolean;
+// } = {
+//   name: "John",
+//   age: 25,
+//   isStudent: true
+// };
+
+
+
+//Index Signatures
+interface Dictionary {
+    [key: string]: string;
+}
+
+const translations: Dictionary = {
+    hello: "Hola",
+    world: "World",
+};
+console.log(translations["hello"]);
+console.log(translations["world"]);
+
+//Numaric Index Signatures
+interface NumericIndex {
+    [index: number]: boolean;
+}
+const flags: NumericIndex = {
+    0:true,
+    1:false,
+    2:true
+}
+console.log(flags[0]);
+console.log(flags[1]);
+
+
+
 
 
 
