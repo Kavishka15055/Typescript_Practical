@@ -20,6 +20,20 @@ const user1 = {
 //get the object keys in to array
 
 const userKeys = Object.keys(user1);
-console.log(userKeys);
+// console.log(userKeys);
+
+let index =0;
+let fullAddress=''
+while(index < userKeys.length){ 
+    // console.log(userKeys[index]);
+    const key=userKeys[index];
+    if (key == 'address1'|| key == 'address2' || key == 'address3'){
+        fullAddress = fullAddress+user1[key]+",";
+    }
+    index++;
+    
+}
+console.log(fullAddress);
+
 
 
