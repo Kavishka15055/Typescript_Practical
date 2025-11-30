@@ -1,22 +1,24 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-//Array looping methods & for-of loop
-const testArr = [1, 2, 3];
-testArr.forEach((value) => console.log(value));
-const t = testArr.map((v) => `hi ${v}`);
-console.log(t);
-const a = testArr.filter((v) => {
-    if (typeof v === 'number') {
-        return v > 1;
-    }
-    return false;
-});
-console.log(a);
-const b = testArr.find((v) => {
-    if (typeof v === 'number') {
-        return v > 1;
-    }
-    return false;
-});
-console.log(b);
+//Object generic
+const obj = {
+    name: true,
+    age: 2
+};
+console.log(obj);
+const arr = ['ddd', 2];
+console.log(arr);
+const tuple = ['add', 2, {
+        name: 'sunil',
+        age: 23,
+    }, 2];
+console.log(tuple);
+//function generic
+const myFunc = (a, b) => {
+    return a;
+};
+myFunc(1, 4);
+function abc(a, b) {
+    return 'abc';
+}
 //# sourceMappingURL=main.js.map
