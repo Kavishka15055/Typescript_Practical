@@ -14,7 +14,7 @@ const user1 = {
     password: "AAA",
     address1: 'no 150/2',
     address2: 'Mawathgama',
-    address3: 'Bandaragama',
+    address3: 'Bandaragama', 
 }
 
 //get the object keys in to array
